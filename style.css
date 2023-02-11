@@ -1,0 +1,153 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --title-color: #0f0f0f;
+    --title-color-dark: #f8f8f8;
+    --numbers-color-hover:#E0E0E0;
+    --numbers-color:#f8f8f8;
+    --functions-btn-dark: #cc6300;
+    --functions-btn-dark-hover: #f87901;
+    --numbers-color-dark: #242424;
+    --operations-color-hover: #d8922a;
+    --operations-color: #dfa248;
+    --backgroud-light-color:#f1f1f1;
+    --background-dark-color: #3b3b3b;
+    --calc-body-color: #B8B8B8;
+    --calc-body-color-dark: #0f0f0f;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--backgroud-light-color);
+}
+
+.all-content {
+    width: 400px;
+    height: 500px;
+    background-color: var(--calc-body-color);
+    padding: 15px;
+    border-radius: 15px;
+    border: 2px solid #121212;
+}
+
+
+#all-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    width: 100%;
+    height: 85%;
+}
+
+#result {
+    grid-column: 1/5;
+    height: 80%;
+    font-family: 'Montserrat', sans-serif;
+    text-align: right;
+    padding-right: 5px;
+    background-color: var(--numbers-color);
+}
+
+#equals {
+    grid-column: 3/5;
+}
+
+.title {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--title-color);
+}
+
+.calc-keys, #equals, #result, #C {
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+}
+
+
+.title, .theme-changer {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.theme-changer {
+    padding: 5px;
+    background-color: var(--background-dark-color);
+    color: var(--numbers-color);
+    border: none;
+    border-radius: 10px;
+}
+
+.theme-changer:hover {
+    background-color: var(--numbers-color-dark);
+    transition-delay: 0.8ms;
+}
+
+.functions-btn {
+    background-color: var(--operations-color);
+}
+
+.functions-btn:hover {
+    background-color: var(--operations-color-hover);
+    transition-delay: 0.8ms;
+}
+
+.numbers-btn {
+    background-color: var(--numbers-color);
+}
+
+.numbers-btn:hover {
+    background-color: var(--numbers-color-hover) ;
+    transition-delay: 0.8ms;
+}
+
+/*--------------------------darkmode------------------------------*/
+
+.container-dark {
+    background-color: var(--background-dark-color);
+}
+
+.all-content-dark {
+    background-color: var(--calc-body-color-dark);
+    border: 2px solid #e0e0e0;
+}
+
+.title-dark {
+    color: var(--title-color-dark);
+}
+
+.numbers-btn-dark {
+    background-color: var(--numbers-color-dark);
+    color: var(--numbers-color);
+}
+
+.numbers-btn-dark:hover {
+    background-color: var(--background-dark-color);
+}
+
+.theme-changer-dark {
+    background-color: var(--backgroud-light-color);
+    color: var(--numbers-color-dark);
+}
+
+.theme-changer-dark:hover {
+    background-color: var(--numbers-color-hover);
+}
+
+.functions-btn-dark {
+    color: var(--numbers-color);
+    background-color: var(--functions-btn-dark);
+}
+
+.functions-btn-dark:hover {
+    background-color: var(--functions-btn-dark-hover);
+}
