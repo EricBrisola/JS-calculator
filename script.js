@@ -55,7 +55,7 @@ function calculate ()
 {
     try
     {
-        if(result.value === '') 
+        if(result.value === ''  || result.value === 'Error') 
         {
             result.value = '0' 
         }
